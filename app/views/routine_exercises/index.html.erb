@@ -1,7 +1,6 @@
 <div class="page-header">
   <h1>
-    Routine exercises
-    <a href="/routine_exercises/new" class="btn btn-lg btn-success">New Routine exercise</a>
+    Routine Exercises
   </h1>
 </div>
 
@@ -10,26 +9,28 @@
     <table class="table table-striped table-hover">
       <tr>
         <th>Exercise</th>
+        <th>Description</th>
         <th>Reps</th>
         <th>Sets</th>
-        <th>Routine</th>
+        <th>Photo</th>
 
         <th>Actions</th>
       </tr>
 
       <% @routine_exercises.each do |routine_exercise| %>
       <tr>
-        <td><%= routine_exercise.exercise_id %></td>
+        <td><%= routine_exercise.exercise.name %></td>
+        <td><%= routine_exercise.exercise.description %></td>
         <td><%= routine_exercise.reps %></td>
         <td><%= routine_exercise.sets %></td>
-        <td><%= routine_exercise.routine_id %></td>
+        <td><img src="<%= routine_exercise.exercise.image %> "class="img-responsive" alt="Responsive image"></td>
         <td>
           <a href="/routine_exercises/<%= routine_exercise.id %>" class="btn btn-primary">Show</a>
-          <a href="/routine_exercises/<%= routine_exercise.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_routine_exercise/<%= routine_exercise.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+
         </td>
       </tr>
       <% end %>
+
     </table>
   </div>
 </div>

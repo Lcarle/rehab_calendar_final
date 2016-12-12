@@ -6,7 +6,10 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Exercise</dt>
-      <dd><%= @routine_exercise.exercise_id %></dd>
+      <dd><%= @routine_exercise.exercise.name %></dd>
+
+      <dt>Description</dt>
+      <dd><%= @routine_exercise.exercise.description %></dd>
 
       <dt>Reps</dt>
       <dd><%= @routine_exercise.reps %></dd>
@@ -15,7 +18,7 @@
       <dd><%= @routine_exercise.sets %></dd>
 
       <dt>Routine</dt>
-      <dd><%= @routine_exercise.routine_id %></dd>
+      <dd><img src="<%= @routine_exercise.exercise.image %>" class="img-responsive" alt="Responsive image"></dd>
 
       <dt>Name</dt>
       <dd><%= @routine_exercise.name %></dd>
@@ -23,15 +26,10 @@
     </dl>
 
     <div class="btn-group btn-group-justified">
-      <a href="/routine_exercises" class="btn btn-primary">
+      <center><a href="/routine_exercises" class="btn btn-primary">
         Back
-      </a>
-      <a href="/routine_exercises/<%= @routine_exercise.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_routine_exercise/<%= @routine_exercise.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
+      </a></center>
+
     </div>
   </div>
 </div>
