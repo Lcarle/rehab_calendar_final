@@ -1,0 +1,41 @@
+exercise_id,exercise_name,reps,sets,routine_id
+1,Quad Set,20,3,1
+2,Straight Leg Raises,20,3,1
+4,Ankle Pumps,20,5,1
+3,Seated Assisted Knee bend,10,3,1
+24,Sitting Knee Extension,20,3,1
+1,Quad Set,20,2,2
+2,Straight Leg Raises,20,1,2
+9,Heel Slides,20,1,2
+5,Clam Shells - no band,20,1,2
+7,Side Leg Raises,20,1,2
+1,Quad Set,20,2,3
+6,Clam Shells with Band,20,2,3
+7,Side Leg Raises,20,2,3
+8,Prone Knee Hang,1,3,3
+9,Heel Slides,20,2,3
+1,Quad Set,20,1,4
+6,Clam Shells with Band,20,2,4
+8,Prone Knee Hang,1,3,4
+9,Heel Slides,20,1,4
+18,Three-Way Kicks,20,1,4
+1,Quad Set,20,1,5
+9,Heel Slides,20,1,5
+18,Three-Way Kicks,20,1,5
+13,Bridges,20,2,5
+11,Monster Walks,20,2,5
+1,Quad Set,20,1,6
+9,Heel Slides,20,1,6
+19,Hip Hitch,20,2,6
+20,Single Leg Dip at Rail,20,2,6
+13,Bridges,20,2,6
+14,Sit-to-Stands,20,2,7
+15,Mini-Squats,20,2,7
+12,Runners,20,1,7
+17,Deadlifts,20,1,7
+20,Single Leg Dip at Rail,20,2,7
+10,Crab Walks,20,2,8
+21,Hamstring Curls on Ball,20,2,8
+22,Single Leg Bridges,20,2,8
+16,Wall Sits,20,2,8
+12,Runners,20,2,8

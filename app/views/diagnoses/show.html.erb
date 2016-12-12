@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Diagnosis #<%= @diagnosis.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Name</dt>
+      <dd><%= @diagnosis.name %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/diagnoses" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/diagnoses/<%= @diagnosis.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_diagnosis/<%= @diagnosis.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+    <ul>
+
+    <% @diagnosis.routines.each do |routine| %>
+    <li> <%= routine.week %> </li>
+    <% end %>
+    </ul>
+  </div>
+</div>

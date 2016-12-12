@@ -1,0 +1,46 @@
+<% if current_user.present? %>
+
+<h2><center> Get started by adding an injury. </center></h2>
+
+<p><center>
+Once you've added your injury, check the "Daily Routine" tab at the top of the page
+ to view your customized set of exercises.
+</center></p>
+
+<center><a href="/injuries/new" class="btn btn-lg btn-success">Add an Injury</a></center>
+
+<% else %>
+<h1><center>Welcome to Rehab Calendar!</center></h1>
+<h5>
+  <center>
+      Recovering from surgery isn't easy.
+    </center>
+</h5>
+<p>
+  <center>
+    But knowing exactly what to do to get better should be.
+  </center>
+</p>
+
+
+<p>
+  <center>
+    Sign up is easy.
+  </center>
+</p>
+<p>
+  <center>
+  Just select the surgery you are recovering from and the date you've been cleared to commence therapy on.
+    We'll then create a customized daily calendar of exercises for you that adjusts as you recover and regain strength.
+
+    Check in daily to complete your routine and track your progress.
+  </center>
+</p>
+
+
+<center><a href="/users/sign_up" class="btn btn-primary">
+  Sign Up Now
+</a>
+</center>
+
+<% end %>

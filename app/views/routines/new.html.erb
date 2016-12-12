@@ -1,0 +1,46 @@
+<!-- Validation failure messages -->
+<% if @routine.errors.any? %>
+  <% @routine.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Routine</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_routine" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for diagnosis_id -->
+      <div class="form-group">
+        <label for="diagnosis_id" class="control-label">
+          Diagnosis
+        </label>
+
+        <input type="text" id="diagnosis_id" name="diagnosis_id" placeholder="Diagnosis" class="form-control" value="<%= @routine.diagnosis_id %>">
+      </div>
+
+      <!-- Label and input for week -->
+      <div class="form-group">
+        <label for="week" class="control-label">
+          Week
+        </label>
+
+        <input type="text" id="week" name="week" placeholder="Week" class="form-control" value="<%= @routine.week %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Routine
+      </button>
+      or
+      <a href="/routines">Cancel</a>
+    </form>
+  </div>
+</div>
