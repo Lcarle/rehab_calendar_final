@@ -3,7 +3,8 @@
 <div>
   <% @user.injuries.each do |injury|%>
         <h5> You are currently rehabbing from the following injuries:</h5>
-        <li> <%= injury.diagnosis.name %>, injured on <%= injury.injury_date %> </liv>
+        <li> <%= injury.diagnosis.name %>, injured on <%= injury.injury_date %>
+          <a href="/injuries/<%= injury.id %>/edit">Edit</a> </liv>
 
             <% end %>
 

@@ -20,11 +20,7 @@
 
       <!-- Label and input for user_id -->
       <div class="form-group">
-        <label for="user_id" class="control-label">
-          User
-        </label>
-
-        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @injury.user_id %>">
+        <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= current_user.id %>">
       </div>
 
       <!-- Label and input for diagnosis_id -->
@@ -33,7 +29,7 @@
           Diagnosis
         </label>
 
-        <input type="text" id="diagnosis_id" name="diagnosis_id" placeholder="Diagnosis" class="form-control" value="<%= @injury.diagnosis_id %>">
+        <%= select_tag(:diagnosis_id, options_from_collection_for_select(Diagnosis.all, :id, :name, @injury.diagnosis_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for injury_date -->
